@@ -35,7 +35,6 @@
             </code>
             <br/><br/>
         </div>
-        
         <!-- INLINE Elements -->
         <hr/><b>Inline Elements</b><hr/>
         <pre><span>I am a inline element1,</span> <span>I am a inline element2</span></pre>
@@ -46,7 +45,6 @@
             </code>
             <br/><br/>
         </div>
-        
         <!-- Heading Tags H1...H6 -->
         <hr/><h2>Tags</h2><hr/>
         <b>Heading Tags</b><hr/>
@@ -55,8 +53,7 @@
         <h3>Heading 1</h3>
         <h4>Heading 1</h4>
         <h5>Heading 1</h5>
-        <h6>Heading 1</h6>
-        
-        <hr/><b>Modern Tags</b><hr/>
+        <h6>Heading 1</h6> 
+        <!-- <hr/><b>Modern Tags</b><hr/> -->
     </body>
 </html>
