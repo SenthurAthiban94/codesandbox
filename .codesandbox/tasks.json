@@ -5,8 +5,9 @@
   // These tasks can be run from CodeSandbox. Running one will open a log in the app.
   "tasks": {
     "yarn dev": {
-      "name": "yarn dev",
-      "command": "yarn dev"
+      "name": "Start Static Server",
+      "command": "yarn && yarn dev",
+      "runAtStart": true
     }
   }
 }
