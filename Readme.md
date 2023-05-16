@@ -84,6 +84,6 @@ Project2 (VueJs/Vuex)
 
 [![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/Senthur_Athiban)
 
-[![gmail](https://img.shields.io/badge/email-d74536?style=for-the-badge&logo=gmail&logoColor=white)](https://twitter.com/)
+[![gmail](https://img.shields.io/badge/email-d74536?style=for-the-badge&logo=gmail&logoColor=white)](mailto:senthurathiban@gmail.com)
 
 [![Paypal](https://img.shields.io/badge/paypal-142c8d?style=for-the-badge&logo=paypal&logoColor=white)](https://www.paypal.com/paypalme/senthurathiban)
