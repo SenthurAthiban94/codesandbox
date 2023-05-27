@@ -5,7 +5,7 @@
         <meta charset="UTF-8"/>
         <title>HTML Basics</title>
         <!-- <meta http-equiv="Content-Security-Policy" content="default 'self';"> -->
-        <meta name="viewport" content="width: device-width, initial-scale: 1.0">
+        <meta name="viewport" content="width=device-width, initial-scale= 1.0">
         <meta name="keywords" content="HTML Basics, Learn HTML, Web development, HTML"/>
         <meta name="description" content="This webpage helps to understand html in much better way. And description should contain characters lenght between 60 to 120 chars">
         <meta name="author" content="Senthur Athiban">
@@ -16,8 +16,44 @@
         <meta name="og:url" content="https://49v1vt-3000.csb.app/HTML/">
         <!-- Canonical URL (Current URL) -->
         <link rel="canonical" href="https://49v1vt-3000.csb.app/HTML/">
+        <script>
+            // Create a class for the element
+            class Senthur extends HTMLElement {
+                constructor(){
+                    super();
+                    this.attachShadow({mode:"open"});
+                }
+                connectedCallback() {
+                    // Fetch the children from the custom element
+                    // var children = ;
+                    // NodeList.prototype.forEach = Array.prototype.forEach;
+                    // console.log(children);
+                    // children.forEach(function(item){
+                    //     console.log('item', item);
+                    //     var cln = item.cloneNode(true);
+                    // });
+                    console.log(this.childNodes.length);
+                        // this.shadowRoot.childNodes=this.childNodes;
+                }
+                adoptedCallback() {
+                    console.log(this.childNodes.length);
+                }
+                attributeChangedCallback(){
+                    console.log(this.childNodes.length);
+                }
+                 disconnectedCallback() {
+                   console.log(this.childNodes.length);
+                        // this.shadowRoot.childNodes=this.childNodes;
+                }
+            }
+
+            // Define the new element
+            customElements.define('senthur-t', Senthur);
+        </script>
     </head>
     <body>
+        <hr/><h2>Custom HTML Tags</h2><hr/>
+        <senthur-t hoverTxt="I am hovering" style="cursor:pointer;">Hover Me</senthur-t>
         <!-- Block Elements -->
         <hr/><b>HTML Elements</b><hr/>
         A HTML Element consist of the following.
