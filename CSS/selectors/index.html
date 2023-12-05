@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            /* Class Selector */
+            .class-selector{
+                background:orange;
+            }
+            /* ID selector */
+            #id-selector{
+                background:yellow;
+            }
+            /* HTML Tag Selector */
+            div{
+                background:red;
+            }
+            .precidence{
+                background:grey;
+            }
+            #precidence{
+                background: orange;
+            }
+            div.precidence#precidence{
+                background: greenyellow;
+            }
+        </style>
+        
+    </head>
+    <body>
+        <h1>Selectors</h1>
+        <p>CSS selectors define the pattern to select elements to which a set of CSS rules are then applied.</p>
+        <div style="background-color:lightgreen;" id="precidence" class="precidence">1 - Inline style</div>
+        <div id="precidence" class="precidence">2 - Longest query</div>
+        <div id="id-selector">3 - Id selector</div>
+        <div class="class-selector">4 - Class</div>
+        <div>5 - Tag</div>
+    </body>
+</html>

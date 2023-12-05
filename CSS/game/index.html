@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .loader1{
+                height: 64px;
+                width: 64px;
+                border-left: 4px solid #008296;
+                border-bottom: 4px solid #008296;
+                /* border-radius: 100%; */
+                /* animation: spin 0s linear infinite; */
+                /* animation-duration: 1.5s; */
+                animation-delay: 0s;
+                position:relative;
+                display:flex;
+                justify-content:center;
+                align-items: center;
+            }
+            /* .loader1>span{
+                background: white;
+                transform: rotate(0deg);
+                border-radius: 100% 0 100% 0;
+                width: 50%;
+                height: 50%;
+                top: -4px;
+                left: -4px;
+                position: absolute;
+            } */
+            @keyframes spin{
+                from{
+                    transform: rotate(0deg);
+                }
+                to{
+                    transform: rotate(360deg);
+                }
+            }
+            
+            
+            @keyframes flip {
+                from {
+                    transform: rotate(0deg);
+                }
+                to {
+                    transform: rotate(180deg);
+                }        
+            }
+        
+            /* AMOD */
+            @keyframes walk {
+                0%{
+                    transform:translate(0,0);
+                }
+                50%{
+                    transform:translate(90vw,0);
+                }
+                100%{
+                    transition: transform 0s;
+                    /* transform:rotateY(180deg); */
+                    
+                }
+            }
+            
+            @keyframes move {
+                0%{
+                    transform:rotate(45deg);
+                }
+                50%{
+                    transform:rotate(-45deg);
+                }
+                100%{
+                    transform:rotate(45deg);
+                }
+            }
+            @keyframes move-reverse {
+                0%{
+                    transform:rotate(-45deg);
+                }
+                50%{
+                    transform:rotate(45deg);
+                }
+                100%{
+                    transform:rotate(-45deg);
+                }
+            }
+            .amod{
+                perspective: 1000px;
+                animation: walk 0s linear infinite;
+                animation-duration:10s;
+                position:relative;
+                height: 260px;
+                bottom:0;
+            }
+            .hip,.head,.neck,.hands,.legs,.body, .stomach{
+                position: absolute;
+            }
+            .neck,.body{
+                background-color:#bb7d6a;
+            }
+            .head{
+                animation: nodd 0s linear infinite;
+                animation-duration:1.5s;
+                top:16px;
+                left: 6px;
+                z-index:1;
+            }
+            .neck{
+                top:70px;
+                width: 16px;
+                height: 40px;
+                left: 40px;
+            }
+            .text-center{
+                display:block;
+                text-align:center;
+            }
+            .body{
+                height:60px;
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                font-size: 12px;
+                letter-spacing: 2px;
+                width:60px;
+                top:104px;
+                left:18px;
+                color:white;
+                background-color:orange;
+                border-radius:16px 16px 50px 50px;
+            }
+            .stomach{
+                background-color:inherit;
+                width:50px;
+                height:45px;
+                top:40px;
+                left: 5px;
+                border-radius:16px 16px 80px 80px;
+            }
+            .hands{
+                display: flex;
+                left: -28px;
+                top: 136px;
+                gap: 4px;
+            }
+            .hand{
+                background-color:orange;
+                height:14px;
+                width:60px;
+            }
+            .hand1{
+                border-radius: 12px 16px 16px 12px;
+                transform:rotate(291deg);
+                border-left: 12px solid #bb7d6a;
+            }
+            .hand2{
+                border-radius: 16px 12px 12px 16px;
+                transform:rotate(75deg);
+                border-right: 12px solid #bb7d6a;
+            }
+            .wrist{
+                width:100px;
+                height:60px;
+                background-color:#bb7d6a;
+            }
+            .hip{
+                background-color: #000;
+                width: 50px;
+                height: 35px;
+                top: 85px;
+                left: -12px;
+                border-radius: 0 0 50% 50%;
+            }
+            .leg{
+                position:absolute;
+                border-radius: 0 0 25px 100px;
+                padding-bottom: 6px;
+                translate: skewX(10deg);
+                border-bottom:12px solid black;
+            }
+            .legs{
+                top:85px;
+                left:35px;
+            }
+            .leg1{
+                animation: move 0s linear infinite;
+                animation-duration: 1.8s;
+                /* transform:rotate(5deg); */
+            }
+            .leg2{
+                animation: move-reverse 0s linear infinite;
+                animation-duration: 1.8s;
+                /* transform:rotate(-5deg); */
+            }
+            .pant{
+                background: linear-gradient(to top, #000, #000 40%, transparent 0% 75%);
+                border-radius: 0 0 8px 8px;
+                height:170px;
+                width:28px;
+            }
+            @keyframes nodd{
+                0%{
+                    transform: rotate(10deg);
+                }
+                25%{
+                    transform: rotate(0deg);
+                }
+                50%{
+                    transform: rotate(-10deg);
+                }
+                75%{
+                    transform: rotate(0deg);
+                }
+                100%{
+                    transform: rotate(10deg);
+                }
+            }
+            .background{
+                display:flex;
+                align-items: flex-end;
+                height: 52vh;
+            }
+            @keyframes jump-animation{
+                0%{
+                    bottom:0;
+                }
+                50% {
+                    bottom: 100px;
+                }
+                100% {
+                    bottom: 0px;
+                }
+            }
+            .jump{
+                position:relative;
+                bottom: 0px;
+                animation: jump-animation 1s linear infinite
+            }
+            hr{
+                border: 6px solid grey;
+                
+            }
+            .gun{
+                height: 150px;
+                width: auto;
+                position:absolute;
+                bottom:0px;
+            }
+            .shoot{
+                animation: walk 0s linear infinite;
+                animation-duration:10s;
+                position:relative;
+                left: -80px;
+                bottom:0px;
+                top:-70px;
+                height: 350px;
+            }
+            body{
+                overflow:hidden;
+                background: url('./sky.jpeg') no-repeat;
+                background-size: cover;
+                margin:0;
+            }
+            .bullet{
+                width: 16px;
+                height: 16px;
+                position: relative;
+                top: 230px;
+                right: 0;
+                left: 80px;
+                border-radius: 50%;
+            }
+            .fire{
+                animation: fire 1s linear infinite;
+                animation-duration:1s;
+            }
+            @keyframes fire{
+                0%{
+                    border: 1px solid black;
+                    left: 80px;
+                }
+                100% {
+                    left:120px;
+                    top: 0px;
+                    box-shadow: 1px 4px 4px 0px;
+                }
+            }
+            h1,h2{
+                text-align:center;
+                margin:0;
+            }
+            h1{
+                margin-bottom:8px;
+            }
+            .grass{
+                width: 100%;
+                position:absolute;
+                height: 120vh;
+                bottom:0;
+            }
+        </style>
+        <script>
+            document.addEventListener('keydown',(e)=>{
+                if(e.code==='ArrowUp'){
+                    const amod = document.getElementsByClassName('wrapper')[0];
+                    const amodAudio = document.getElementsByClassName('jumpAudio')[0];
+                    if(!amod.className.includes('jump')){
+                        amodAudio.play();
+                        amod.classList.add('jump');
+                        setTimeout(()=>{
+                            amod.classList.remove('jump');
+                        }, 1000);
+                    }
+                }
+                if(e.code==='Space'){
+                    const ballColor = Math.floor(Math.random()*16777215).toString(16);
+                    const bullet = document.getElementsByClassName('bullet')[0];
+                    const shootAudio = document.getElementsByClassName('shootAudio')[0];
+                    if(!bullet.className.includes('fire')){
+                        shootAudio.play();
+                        bullet.style.backgroundColor = `#${ballColor}`;
+                        bullet.classList.add('fire');
+                        setTimeout(()=>{
+                            bullet.classList.remove('fire');
+                            bullet.style.backgroundColor = 'transparent';
+                        }, 1000);
+                    }
+                }
+            })
+        </script>
+    </head>
+    <body>
+        <h1>Jumping Jack</h1>
+        <img src="./grass.png" class="grass"/>
+        <!-- <h1>Loaders</h1> -->
+        <!-- <div class="loader1"><span></span></div> -->
+        <!-- <hr/>-->
+        <h2>Press Space to shoot & Up Arrow to jump</h2>
+        <div class="background">
+            <div class="wrapper">
+                <div class="amod">
+                    <img class="head" src="./amod.png" height="85" width="85">
+                    <span class="neck"></span>
+                    <span class="body">
+                        
+                        <span class="stomach"></span>
+                    </span>
+                    <div class="hands">
+                        <span class="hand hand1">
+                            <span class="wrist"></span>
+                        </span>
+                        <span class="hand hand2">
+                            <span class="wrist"></span>
+                        </span>
+                    </div>
+                    <div class="legs">
+                        <span class="hip"></span>
+                        <div class="leg leg1">
+                            <div class="pant"></div>
+                        </div>
+                        <div class="leg leg2">
+                            <div class="pant"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr/>
+        <div class="shoot">
+            <img class="gun" src="./gun.png">
+                <div class="bullet"></div>
+            </img>
+        </div>
+        <audio src="./jump.mp3" class="jumpAudio"/>
+        <audio src="./gunshot.mp3" class="shootAudio"/>
+    </body>
+</html>
