@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,body{
+            margin:0;
+        }
+        .s{
+            top: 10px;
+            bottom: 10px;
+            left: 50px;
+            right: 50px;
+            background:lightblue;
+        }
+        .r{
+            position: relative;
+            top: 10px;
+            bottom: 10px;
+            left: 50px;
+            right: 50px;
+            background:orange;
+        }
+        .a{
+            background: lightgreen;
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            width:100%;
+        }
+        .f {
+            position: fixed;
+            background: red;
+            left: 5px;
+            top:0px;
+        }
+        .sticky{
+            position: sticky;
+            height: 200px;
+            top: 100px;
+            z-index: 2;
+            background: yellow;
+        }
+        .parent{
+            position: fixed;
+            height: 10px;
+            width:10px;
+            z-index: 1;
+        }
+        .scroll{
+            height: 1000px;
+            background: grey;
+        }
+        .parentSticky{
+            top:50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Positions</h1>
+    <div class="s">
+        Static - Default Position. 
+        <ul>
+            <li>If an element doesn't have position by default its static.</li>
+            <li>Top Left Bottom Right z-index will not reflect.</li>
+            <li>If an element doesn't have position by default its static.</li>
+        </ul>
+    </div>
+    <span>hello</span>
+    <span class="r">
+        Relative
+    </span>
+    <div class="">
+        <div class="a">
+            Absolute
+        </div>
+    </div>
+    <div class="parent">
+        <div class="f">
+            Fixed
+        </div>
+    </div>
+    <div class="scroll">
+    <div class="sticky">
+        Sticky
+    </div>
+</div>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+</body>
+</html>

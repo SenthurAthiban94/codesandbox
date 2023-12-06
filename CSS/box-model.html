@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .example{
+            padding: 16px;
+            margin: 16px;
+            border: 5px solid red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Box Model</h1>
+    <p>
+        Inline elements margin top and bottom won't apply but padding will apply.
+        Block elements margin top and bottom will work and padding also will work.
+    </p>
+    <div class="example">
+        Example content
+    </div>
+    <div style="">
+    <div style="display:inline;border:2px solid black;margin-right:20px;">
+        left
+    </div>
+    <div style="display:inline;border:2px solid black;width:100px;height:100px;margin-left:20px;"> 
+        right
+    </div>
+    </div>
+</body>
+</html>
