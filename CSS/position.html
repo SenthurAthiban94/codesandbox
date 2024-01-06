@@ -26,15 +26,17 @@
         .a{
             background: lightgreen;
             position: absolute;
-            top: 50px;
-            left: 50px;
-            width:100%;
+            top: 0px;
+            left: 0px;
+            width:10%;
         }
         .f {
             position: fixed;
             background: red;
-            left: 5px;
-            top:0px;
+            left: 0;
+            right:0;
+            top:0;
+            /* width:100%; */
         }
         .sticky{
             position: sticky;
@@ -65,14 +67,13 @@
         <ul>
             <li>If an element doesn't have position by default its static.</li>
             <li>Top Left Bottom Right z-index will not reflect.</li>
-            <li>If an element doesn't have position by default its static.</li>
         </ul>
     </div>
     <span>hello</span>
     <span class="r">
         Relative
     </span>
-    <div class="">
+    <div class="f">
         <div class="a">
             Absolute
         </div>

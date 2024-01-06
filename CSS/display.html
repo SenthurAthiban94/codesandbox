@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display</title>
+    <style>
+        .flow-root{
+            padding: 8px;
+            display: flow-root;
+            border: 1px solid red;
+        }
+        .ruby{
+            padding: 8px;
+            display: ruby;
+            border: 1px solid red;
+        }
+        .flow{
+            padding: 8px;
+            display: flow;
+            border: 1px solid red;
+        }
+        .flex{
+            padding: 8px;
+            display: flex;
+            border: 1px solid red;
+        }
+        .grid{
+            padding: 8px;
+            display: grid;
+            border: 1px solid red;
+        }
+        .table{
+            padding: 8px;
+            display: table;
+            border: 1px solid red;
+        }
+        .flow > div,.flow > span,.grid > div,.grid > span,.flex > div, .table > div,.table > span, .flow-root > div, .flow-root > span{
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <h1>Display</h1>
+    <p>Display is used to make an element <b>inline</b> or <b>block</b> or it can be used to arrange its contents in a layout <b>(Flex/Grid/Flow)</b></p>
+    <p>Display can be grouped into the following types</p>
+    <ul>
+        <li>
+            <b>Outside</b> - Determines the elements outer display type
+            <ul>
+                <li><b>inline</b> - Element will be inline occupying space based on its content. Arranged in a single line</li>
+                <li><b>block</b> - Element will occupy entire line and will have a new line break before and after the current element.</li>
+            </ul>
+        </li>
+        <li>
+            <b>Inside</b> - Determines the arrangement of its contents within the element.
+            <ul>
+                <li>
+                    <b>flow-root - block root element, content according to inline or block element</b>
+                    <span class="flow-root">
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                        <div>4</div>
+                        <div>5</div>
+                    </span>
+                </li>
+                <li><b>table - inline root element, content according to inline or block element</b>
+                    <div class="table">
+                        <div>1dafsagfasf</div>
+                        <span>2</span>
+                        <div>3</div>
+                        <div>4</div>
+                        <div>5</div>
+                    </div>    
+                </li>
+                <li>
+                    <b>flex - root Block element and contents are considered inline element for both (div/span)</b>
+                    <div class="flex">
+                        <div>1dafsagfasf</div>
+                        <div>2</div>
+                        <div>3</div>
+                        <div>4</div>
+                        <div>5</div>
+                    </div>    
+                </li>
+                <li>
+                    <b>grid - root Block element and contents are considered block element for both (div/span)</b>
+                    <div class="grid">
+                        <span>1dafsagfasf</span>
+                        <span>2</span>
+                        <span>3</span>
+                        <span>4</span>
+                        <span>5</span>
+                    </div>
+                </li>
+                <li>
+                    <b>flow - root is block element and contents are inline or block element</b>
+                    <span class="flow">
+                        <span>1sdfasd</span>
+                        <span>2</span>
+                        <span>3</span>
+                        <span>4</span>
+                        <span>5</span>
+                    </span>
+                </li>
+                <li><b>ruby - Both Root & Contents will act according to the element type (block/inline) (div/span)</b>
+                    <div class="ruby">
+                        <div>1sdfasd</div>
+                        <div>2</div>
+                        <div>3</div>
+                        <div>4</div>
+                        <div>5</div>
+                    </div>
+                </li>
+            </ul>
+        </li>
+        <li><b>List</b> Item</li>
+        <li><b>Internal</b></li>
+        <li><b>Box</b></li>
+        <li><b>Precomposed</b></li>
+    </ul>
+</body>
+</html>
